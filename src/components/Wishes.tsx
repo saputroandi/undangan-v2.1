@@ -37,9 +37,9 @@ const Wishes: React.FC<WishesProps> = (props) => {
                 <p>Kirim</p>
               </div>
             </div>
-            <div className="w-full h-96 bg-slate-100 rounded-lg overflow-auto">
+            <div className="w-full h-screen bg-slate-100 rounded-lg overflow-auto">
               {/* loop wishes here */}
-              <div className="w-11/12 mt-3 mx-auto p-3 flex flex-col gap-2 rounded-lg bg-slate-300">
+              <div className="w-11/12 mt-3 mx-auto p-3 flex flex-col gap-2 text-sm rounded-lg bg-slate-300">
                 <p>
                   <strong>Lorem, ipsum.</strong>
                 </p>
