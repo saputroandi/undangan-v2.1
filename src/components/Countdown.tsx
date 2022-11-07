@@ -8,17 +8,19 @@ type OpeningProps = {
 const Opening: React.FC<OpeningProps> = (props) => {
   return (
     <>
-      <section className="w-full h-screen flex flex-col justify-center">
-        <div className="h-96 flex flex-col justify-between items-center">
+      <section className="w-full flex flex-col justify-center bg-gray-300">
+        <div className="h-96 flex flex-col justify-between items-center mb-20">
           <div className="w-8/12 h-64 flex flex-col items-center justify-around">
             <SlideComp direction={Direction.Left}>
               <div className="w-full text-3xl text-left">
                 <h2>fulanah</h2>
               </div>
             </SlideComp>
-            <div className="text-xl">
-              <h2>&</h2>
-            </div>
+            <SlideComp>
+              <div className="text-xl">
+                <h2>&</h2>
+              </div>
+            </SlideComp>
             <SlideComp direction={Direction.Right}>
               <div className="w-full text-3xl text-right">
                 <h2>fulan</h2>

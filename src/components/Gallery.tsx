@@ -1,4 +1,5 @@
 import React, { MouseEventHandler, useState } from "react";
+import SlideComp, { Direction } from "./animate/SlideComp";
 
 type Photo = {
   url: string;
@@ -55,21 +56,27 @@ const Gallery: React.FC<GalleryProps> = (props) => {
 
   return (
     <>
-      <section className="relative w-full py-10 flex flex-col justify-between items-center">
+      <section className="relative w-full py-10 flex flex-col justify-between items-center bg-gray-300">
         <div className="w-10/12 flex flex-col gap-7 text-center">
-          <div>
-            <p>Gallery</p>
-          </div>
+          <SlideComp>
+            <div>
+              <p>Gallery</p>
+            </div>
+          </SlideComp>
           <div className="w-100 grid gap-2 grid-cols-2">
             {photos.map((photo, idx) => {
               return (
                 <>
-                  <div
-                    className="w-100 border-4 rounded-lg overflow-hidden"
-                    onClick={() => handleShowModal(photo)}
+                  <SlideComp
+                    direction={idx % 2 === 0 ? Direction.Right : Direction.Left}
                   >
-                    <img src={photo.url} alt={photo.alt} key={idx} />
-                  </div>
+                    <div
+                      className="w-100 border-4 rounded-lg overflow-hidden"
+                      onClick={() => handleShowModal(photo)}
+                    >
+                      <img src={photo.url} alt={photo.alt} key={idx} />
+                    </div>
+                  </SlideComp>
                 </>
               );
             })}

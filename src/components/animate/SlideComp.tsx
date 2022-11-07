@@ -9,8 +9,9 @@ export enum Direction {
 }
 
 type Props = {
-  direction: Direction;
+  direction?: Direction;
   children: React.ReactElement | React.ReactElement[];
+  class?: string;
 };
 
 export default function SlideComp(props: Props) {
@@ -30,8 +31,11 @@ export default function SlideComp(props: Props) {
     case Direction.Down:
       translateValue = "translateY(-70px)";
       break;
-    default:
+    case Direction.Up:
       translateValue = "translateY(70px)";
+      break;
+    default:
+      translateValue = "";
       break;
   }
   return (
@@ -42,6 +46,7 @@ export default function SlideComp(props: Props) {
         transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
       ref={refComp}
+      className={props.class}
     >
       {props.children}
     </div>

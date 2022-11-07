@@ -7,8 +7,8 @@ type BaseProps = {
 const BaseComponent: React.FC<BaseProps> = (props) => {
   return (
     <>
-      <div className="flex justify-center bg-blue-400">
-        <div className="relative w-full flex items-center md:w-3/12 bg-gray-400">
+      <div className="flex justify-center bg-[rgba(0,0,0,0)]">
+        <div className="relative w-full flex items-center md:w-3/12">
           {props.children}
         </div>
       </div>

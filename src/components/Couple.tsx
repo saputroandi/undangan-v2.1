@@ -8,7 +8,7 @@ type CoupleProps = {
 const Couple: React.FC<CoupleProps> = (props) => {
   return (
     <>
-      <section className="w-full py-10 flex flex-col justify-between items-center">
+      <section className="w-full py-10 flex flex-col justify-between items-center bg-gray-300">
         <div className="w-10/12 flex flex-col items-center gap-7">
           <div className="flex flex-col gap-4 items-center">
             <SlideComp direction={Direction.Left}>
@@ -44,7 +44,7 @@ const Couple: React.FC<CoupleProps> = (props) => {
             </SlideComp>
           </div>
 
-          <SlideComp direction={Direction.Up}>
+          <SlideComp>
             <p className="text-lg">&</p>
           </SlideComp>
 
