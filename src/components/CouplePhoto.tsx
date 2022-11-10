@@ -10,6 +10,11 @@ const CouplePhoto: React.FC<CouplePhotoProps> = (props) => {
     <>
       <section className="w-full h-[80vh] flex flex-col justify-center">
         <div className="relative w-full h-full flex flex-col justify-between items-center overflow-hidden">
+          <img
+            className="absolute w-full h-full -z-10 object-cover object-bottom"
+            src="https://images.unsplash.com/photo-1506014299253-3725319c0f69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="couple-holding-hand"
+          />
           <svg
             id="visual"
             viewBox="0 0 900 600"

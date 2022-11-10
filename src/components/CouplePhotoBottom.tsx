@@ -25,6 +25,11 @@ const CouplePhotoBottom: React.FC<CouplePhotoBottomProps> = (props) => {
               strokeLinejoin="miter"
             />
           </svg>
+          <img
+            className="absolute w-full h-full -z-10 object-cover object-bottom"
+            src="https://images.unsplash.com/photo-1513744985676-c7e80ee4d05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="couple-pick-girl"
+          />
         </div>
       </section>
     </>
