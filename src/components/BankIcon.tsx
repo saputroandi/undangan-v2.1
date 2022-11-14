@@ -1,14 +1,14 @@
 import React from "react";
 import SlideComp, { Direction } from "./animate/SlideComp";
 
-type BankModalProps = {
+type BankIconProps = {
 	children?: React.ReactElement;
 };
 
-const BankModal: React.FC<BankModalProps> = (props) => {
+const BankIcon: React.FC<BankIconProps> = (props) => {
 	return (
 		<>
-			<div className="fixed top-0 left-0 w-12 h-12 z-10">
+			<div className="fixed top-[75%] left-[85%] w-12 h-12 z-10">
 				<SlideComp>
 					<div className="w-full h-full rounded-full bg-gray-700">
 						<svg
@@ -24,4 +24,4 @@ const BankModal: React.FC<BankModalProps> = (props) => {
 	);
 };
 
-export default BankModal;
+export default BankIcon;

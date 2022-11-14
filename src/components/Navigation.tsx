@@ -10,7 +10,7 @@ const Navigation: React.FC<NavigationProps> = (props) => {
 		<>
 			<section className="relative w-full md:w-3/12 h-full mx-auto bottom-10 z-30 flex justify-center">
 				<div className="fixed w-10/12 md:w-3/12 h-10 py-10 bottom-10 flex justify-around items-center">
-					<div className="w-12 h-12 rounded-md bg-gray-700">
+					<div className="w-12 h-12 rounded-md bg-gray-700" onClick={() => alert("ok")}>
 						<svg
 							className="w-full h-full p-2 fill-transparent stroke-white"
 							viewBox="0 0 48 48"

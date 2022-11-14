@@ -12,18 +12,19 @@ import Navigation from "./components/Navigation";
 import Opening from "./components/Opening";
 import Protocol from "./components/Protocol";
 import Wishes from "./components/Wishes";
-import BankModal from "./components/BankModal";
-import MusicModal from "./components/MusicModal";
+import BankIcon from "./components/BankIcon";
+import MusicIcon from "./components/MusicIcon";
+import { AnimatePresence } from "framer-motion";
 
 type AppProps = {
 	children?: React.ReactNode;
 };
 
 const App: React.FC = (props: AppProps): React.ReactElement => {
-	const [showModal, setShowModal] = useState<boolean>(true);
+	const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(true);
 	const components: React.ReactElement[] = [
-		<BankModal />,
-		<MusicModal />,
+		<BankIcon />,
+		<MusicIcon />,
 		<CouplePhoto />,
 		<Countdown />,
 		<Opening />,
@@ -38,23 +39,23 @@ const App: React.FC = (props: AppProps): React.ReactElement => {
 
 	return (
 		<>
-			{components.map((component) => {
-				return (
-					<main>
-						{showModal ? (
-							<WelcomeModal
-								showWelcomeModal={showModal}
-								setShowWelcomeModal={setShowModal}
-							/>
-						) : (
+			<WelcomeModal
+				showWelcomeModal={showWelcomeModal}
+				setShowWelcomeModal={setShowWelcomeModal}
+				key={"welcomemodal"}
+			/>
+
+			{!showWelcomeModal &&
+				components.map((component, idx) => {
+					return (
+						<main>
 							<>
-								<BaseComponent>{component}</BaseComponent>
-								<Navigation />
+								<BaseComponent key={idx}>{component}</BaseComponent>
+								<Navigation key={"navigationKey"} />
 							</>
-						)}
-					</main>
-				);
-			})}
+						</main>
+					);
+				})}
 		</>
 	);
 };

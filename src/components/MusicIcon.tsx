@@ -1,14 +1,14 @@
 import React from "react";
 import SlideComp, { Direction } from "./animate/SlideComp";
 
-type MusicModalProps = {
+type MusicIconProps = {
 	children?: React.ReactElement;
 };
 
-const MusicModal: React.FC<MusicModalProps> = (props) => {
+const MusicIcon: React.FC<MusicIconProps> = (props) => {
 	return (
 		<>
-			<div className="fixed top-0 left-0 w-12 h-12 z-10">
+			<div className="fixed top-[68%] left-[85%] w-12 h-12 z-10">
 				<SlideComp>
 					<div className="w-full h-full rounded-full bg-gray-700">
 						<svg
@@ -29,7 +29,7 @@ const MusicModal: React.FC<MusicModalProps> = (props) => {
 	);
 };
 
-export default MusicModal;
+export default MusicIcon;
 
 {
 	/* <svg width="1em" height="1em" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm12.5 0l-3.5 4.5m0-4.5l3.5 4.5"></path></svg> */
