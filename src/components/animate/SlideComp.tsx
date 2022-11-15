@@ -9,12 +9,9 @@ export enum Direction {
 }
 
 type Props = {
-	direction?: Direction;
-	children:
-		| React.ReactElement
-		| React.ReactElement[]
-		| ReactElement<any, string | JSXElementConstructor<any>>;
-	class?: string;
+  direction?: Direction;
+  children: React.ReactElement | React.ReactElement[];
+  class?: string;
 };
 
 export default function SlideComp(props: Props) {
