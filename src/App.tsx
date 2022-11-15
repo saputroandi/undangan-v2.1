@@ -14,50 +14,49 @@ import Protocol from "./components/Protocol";
 import Wishes from "./components/Wishes";
 import BankIcon from "./components/BankIcon";
 import MusicIcon from "./components/MusicIcon";
-import { AnimatePresence } from "framer-motion";
 
 type AppProps = {
-	children?: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const App: React.FC = (props: AppProps): React.ReactElement => {
-	const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(true);
-	const components: React.ReactElement[] = [
-		<BankIcon />,
-		<MusicIcon />,
-		<CouplePhoto />,
-		<Countdown />,
-		<Opening />,
-		<Couple />,
-		<Event />,
-		<Maps />,
-		<Gallery />,
-		<Wishes />,
-		<Protocol />,
-		<CouplePhotoBottom />,
-	];
+  const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(true);
+  const components: React.ReactElement[] = [
+    <BankIcon />,
+    <MusicIcon />,
+    <CouplePhoto />,
+    <Countdown />,
+    <Opening />,
+    <Couple />,
+    <Event />,
+    <Maps />,
+    <Gallery />,
+    <Wishes />,
+    <Protocol />,
+    <CouplePhotoBottom />,
+  ];
 
-	return (
-		<>
-			<WelcomeModal
-				showWelcomeModal={showWelcomeModal}
-				setShowWelcomeModal={setShowWelcomeModal}
-				key={"welcomemodal"}
-			/>
+  return (
+    <>
+      <WelcomeModal
+        showWelcomeModal={showWelcomeModal}
+        setShowWelcomeModal={setShowWelcomeModal}
+        key={"welcomemodal"}
+      />
 
-			{!showWelcomeModal &&
-				components.map((component, idx) => {
-					return (
-						<main>
-							<>
-								<BaseComponent key={idx}>{component}</BaseComponent>
-								<Navigation key={"navigationKey"} />
-							</>
-						</main>
-					);
-				})}
-		</>
-	);
+      {!showWelcomeModal &&
+        components.map((component, idx) => {
+          return (
+            <main>
+              <>
+                <BaseComponent key={idx}>{component}</BaseComponent>
+                <Navigation key={"navigationKey"} />
+              </>
+            </main>
+          );
+        })}
+    </>
+  );
 };
 
 export default App;
