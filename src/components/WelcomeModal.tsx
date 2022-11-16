@@ -40,8 +40,8 @@ const WelcomeModal: React.FC<WelcomeModalProps> = (props) => {
 							src="https://images.unsplash.com/photo-1645389411992-e9ec49b158e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
 							alt="couple"
 						/>
-						<div className="absolute w-full h-full flex flex-col items-center justify-center bg-gradient-to-t from-gray-400">
-							<div className="w-10/12 flex flex-col justify-center items-center">
+						<div className="absolute w-full h-full flex flex-col items-center justify-center bg-gradient-to-t from-primary">
+							<div className="w-10/12 flex flex-col justify-center items-center text-secondary">
 								<div className="">
 									<p>The Wedding</p>
 								</div>
@@ -55,12 +55,12 @@ const WelcomeModal: React.FC<WelcomeModalProps> = (props) => {
 									</div>
 								</div>
 								{params && (
-									<div className="w-10/12 h-24 flex justify-center items-center mt-4 rounded-md bg-white opacity-60">
+									<div className="w-10/12 h-24 flex justify-center items-center mt-4 rounded-md bg-white opacity-60 text-primary">
 										<p>{params}</p>
 									</div>
 								)}
 								<div
-									className="p-2 mt-4 rounded-md bg-gray-400"
+									className="p-2 mt-4 rounded-md bg-secondary text-primary font-bold"
 									onClick={() => props.setShowWelcomeModal(false)}
 								>
 									<p>Buka Undangan</p>
