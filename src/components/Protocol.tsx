@@ -14,11 +14,12 @@ const Protocol: React.FC<ProtocolProps> = (props) => {
             <div className="text-center">
               <p>Covid-19 Prevention</p>
             </div>
-            <div>
+            <div className="text-center text-sm">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eveniet
-                voluptates quam nisi obcaecati est hic, commodi necessitatibus vel
-                deleniti!
+                Jangan ragu untuk datang, kami sudah berkoordinasi dengan pihak lain untuk
+                mencegah penularan COVID-19. Acara kami akan mengikuti segala prosedur
+                protokol kesehatan untuk mencegah penularan COVID-19. So don't be panic,
+                we look forward to seeing you there!
               </p>
             </div>
           </div>

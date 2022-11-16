@@ -12,7 +12,7 @@ const Opening: React.FC<OpeningProps> = (props) => {
         <div className="w-10/12 flex flex-col text-justify gap-7">
           <SlideComp direction={Direction.Up}>
             <div className="text-center mb-6">
-              <p>Lorem, ipsum dolor.</p>
+              <img src="/png/basmallah.png" alt="basmallah" />
             </div>
             <div>
               <p>

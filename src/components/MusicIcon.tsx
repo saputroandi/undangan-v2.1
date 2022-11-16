@@ -14,11 +14,11 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
           <>
             {play && (
               <div
-                className="w-full h-full rounded-full bg-secondary"
+                className="w-full h-full rounded-md bg-primary border-2 border-secondary shadow shadow-secondary"
                 onClick={() => setPlay(false)}
               >
                 <svg
-                  className="w-full h-full p-2 fill-transparent stroke-primary"
+                  className="w-full h-full p-2 fill-transparent stroke-secondary"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -33,11 +33,11 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
 
             {!play && (
               <div
-                className="w-full h-full rounded-full bg-secondary"
+                className="w-full h-full rounded-md bg-primary border-2 border-secondary shadow shadow-secondary"
                 onClick={() => setPlay(true)}
               >
                 <svg
-                  className="w-full h-full p-2 fill-transparent stroke-primary"
+                  className="w-full h-full p-2 fill-transparent stroke-secondary"
                   viewBox="0 0 16 16"
                 >
                   <path

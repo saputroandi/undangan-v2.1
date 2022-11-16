@@ -43,7 +43,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
           <div className="w-8/12 h-64 flex flex-col items-center justify-around text-secondary">
             <SlideComp direction={Direction.Left}>
               <div className="w-full text-3xl text-left">
-                <h2>fulanah</h2>
+                <h2>Nanda</h2>
               </div>
             </SlideComp>
             <SlideComp>
@@ -53,7 +53,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
             </SlideComp>
             <SlideComp direction={Direction.Right}>
               <div className="w-full text-3xl text-right">
-                <h2>fulan</h2>
+                <h2>Enggar</h2>
               </div>
             </SlideComp>
           </div>

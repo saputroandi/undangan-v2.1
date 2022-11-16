@@ -25,22 +25,22 @@ const Couple: React.FC<CoupleProps> = (props) => {
             </SlideComp>
 
             <SlideComp direction={Direction.Left}>
-              <div className="text-center">Fulan</div>
+              <div className="text-center">Rosnanda Kusumadawati, SKM</div>
               <div className="flex flex-col items-center gap-2">
                 <div>
                   <p>
-                    <strong>Putri pertama dari</strong>
+                    <strong>Putri Kedua dari</strong>
                   </p>
                 </div>
                 <div className="text-center">
                   <div>
-                    <p>Bapak Fulan</p>
+                    <p>Bapak Sutaris Nandar</p>
                   </div>
                   <div>
                     <p>Dan</p>
                   </div>
                   <div>
-                    <p>Ibu Fulanah</p>
+                    <p>Ibu Rusmini Rahayu</p>
                   </div>
                 </div>
               </div>
@@ -63,22 +63,22 @@ const Couple: React.FC<CoupleProps> = (props) => {
             </SlideComp>
 
             <SlideComp direction={Direction.Right}>
-              <div className="text-center">Fulan</div>
+              <div className="text-center">Enggar Tri Sintara</div>
               <div className="flex flex-col items-center gap-2">
                 <div>
                   <p>
-                    <strong>Putri pertama dari</strong>
+                    <strong>Putra Ketiga dari</strong>
                   </p>
                 </div>
                 <div className="text-center">
                   <div>
-                    <p>Bapak Fulan</p>
+                    <p>Bapak Mochammad Yasintara</p>
                   </div>
                   <div>
                     <p>Dan</p>
                   </div>
                   <div>
-                    <p>Ibu Fulanah</p>
+                    <p>Ibu Siti Fatimah</p>
                   </div>
                 </div>
               </div>

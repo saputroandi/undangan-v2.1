@@ -12,9 +12,9 @@ const Navigation: React.FC<NavigationProps> = (props) => {
       <section className="relative w-full md:w-3/12 h-full mx-auto bottom-10 z-30 flex justify-center">
         <div className="fixed w-10/12 md:w-3/12 h-10 py-10 bottom-10 flex justify-around items-center z-50">
           <Link offset={-25} to="couple" smooth={true} duration={1500}>
-            <div className="w-12 h-12 rounded-md bg-secondary">
+            <div className="w-12 h-12 rounded-md bg-primary border-2 border-secondary shadow-sm shadow-secondary">
               <svg
-                className="w-full h-full p-2 fill-transparent stroke-primary"
+                className="w-full h-full p-2 fill-transparent stroke-secondary"
                 viewBox="0 0 48 48"
               >
                 <g strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">
@@ -25,9 +25,9 @@ const Navigation: React.FC<NavigationProps> = (props) => {
             </div>
           </Link>
           <Link offset={-25} to="event" smooth={true} duration={1500}>
-            <div className="w-12 h-12 rounded-md bg-secondary">
+            <div className="w-12 h-12 rounded-md bg-primary border-2 border-secondary shadow-sm shadow-secondary">
               <svg
-                className="w-full h-full p-2 fill-transparent stroke-primary"
+                className="w-full h-full p-2 fill-transparent stroke-secondary"
                 viewBox="0 0 24 24"
                 strokeWidth="1"
               >
@@ -36,9 +36,9 @@ const Navigation: React.FC<NavigationProps> = (props) => {
             </div>
           </Link>
           <Link offset={-25} to="maps" smooth={true} duration={1500}>
-            <div className="w-12 h-12 rounded-md bg-secondary">
+            <div className="w-12 h-12 rounded-md bg-primary border-2 border-secondary shadow-sm shadow-secondary">
               <svg
-                className="w-full h-full p-2 fill-transparent stroke-primary"
+                className="w-full h-full p-2 fill-transparent stroke-secondary"
                 viewBox="0 0 48 48"
               >
                 <path
@@ -51,7 +51,7 @@ const Navigation: React.FC<NavigationProps> = (props) => {
             </div>
           </Link>
           <Link offset={-25} to="gallery" smooth={true} duration={1500}>
-            <div className="w-12 h-12 rounded-md bg-secondary">
+            <div className="w-12 h-12 rounded-md bg-primary border-2 border-secondary shadow-sm shadow-secondary">
               <svg
                 className="w-full h-full p-2 stroke-gray-700 fill-white"
                 strokeWidth="1"
@@ -62,18 +62,18 @@ const Navigation: React.FC<NavigationProps> = (props) => {
             </div>
           </Link>
           <Link offset={-25} to="wishes" smooth={true} duration={1500}>
-            <div className="w-12 h-12 rounded-md bg-secondary">
+            <div className="w-12 h-12 rounded-md bg-primary border-2 border-secondary shadow-sm shadow-secondary">
               <svg
                 className="w-full h-full p-2 fill-transparent"
                 viewBox="0 0 36 36"
                 strokeWidth="2"
               >
                 <path
-                  className="stroke-primary"
+                  className="stroke-secondary"
                   d="M8 19v-8H5a3 3 0 0 0-3 3v18a1 1 0 0 0 .56.89a1 1 0 0 0 1-.1L8.71 29h13.44A2.77 2.77 0 0 0 25 26.13V25H14a6 6 0 0 1-6-6Z"
                 ></path>
                 <path
-                  className="stroke-primary"
+                  className="stroke-secondary"
                   d="M31 4H14a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h13.55l4.78 3.71a1 1 0 0 0 1 .11a1 1 0 0 0 .57-.9V7A3 3 0 0 0 31 4Z"
                 ></path>
                 <path d="M0 0h36v36H0z"></path>
