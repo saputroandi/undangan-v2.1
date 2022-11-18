@@ -1,5 +1,8 @@
 import { motion, Variants } from "framer-motion";
 import React from "react";
+import Particles from "react-particles";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 import SlideComp, { Direction } from "./animate/SlideComp";
 
 type CouplePhotoProps = {
@@ -7,16 +10,97 @@ type CouplePhotoProps = {
 };
 
 const CouplePhoto: React.FC<CouplePhotoProps> = (props) => {
+  const particlesInit = React.useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
   return (
     <>
       <section className="w-full h-[80vh] flex flex-col justify-center">
         <div className="relative w-full h-full flex flex-col justify-between items-center overflow-hidden">
-          <img
+          {/* <img
             className="absolute w-full h-full -z-10 object-cover object-bottom"
             src="https://images.unsplash.com/photo-1506014299253-3725319c0f69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             alt="couple-holding-hand"
-          />
-          <svg
+          /> */}
+          <div className="absolute top-0 left-0 w-full h-full -z-10 object-cover object-bottom">
+            <Particles
+              className="absolute top-0 left-0 w-full h-full"
+              init={particlesInit}
+              options={{
+                background: {
+                  color: {
+                    value: "rgba(0,0,0,0.6)",
+                  },
+                },
+                fpsLimit: 120,
+                interactivity: {
+                  events: {
+                    onClick: {
+                      enable: true,
+                      mode: "push",
+                    },
+                    onHover: {
+                      enable: true,
+                      mode: "repulse",
+                    },
+                    resize: true,
+                  },
+                  modes: {
+                    push: {
+                      quantity: 4,
+                    },
+                    repulse: {
+                      distance: 200,
+                      duration: 0.4,
+                    },
+                  },
+                },
+                particles: {
+                  color: {
+                    value: "#ffffff",
+                  },
+                  links: {
+                    color: "#ffffff",
+                    distance: 150,
+                    enable: false,
+                    opacity: 0.5,
+                    width: 1,
+                  },
+                  collisions: {
+                    enable: true,
+                  },
+                  move: {
+                    directions: "none",
+                    enable: true,
+                    outModes: {
+                      default: "bounce",
+                    },
+                    random: false,
+                    speed: 6,
+                    straight: false,
+                  },
+                  number: {
+                    density: {
+                      enable: true,
+                      area: 800,
+                    },
+                    value: 80,
+                  },
+                  opacity: {
+                    value: 0.5,
+                  },
+                  shape: {
+                    type: "circle",
+                  },
+                  size: {
+                    value: { min: 1, max: 5 },
+                  },
+                },
+                detectRetina: true,
+              }}
+            />
+          </div>
+          {/* <svg
             id="visual"
             viewBox="0 0 900 600"
             className="absolute bottom-0 left-0 right-0 w-[120%]"
@@ -30,7 +114,7 @@ const CouplePhoto: React.FC<CouplePhotoProps> = (props) => {
               strokeLinecap="round"
               strokeLinejoin="miter"
             />
-          </svg>
+          </svg> */}
         </div>
       </section>
     </>
