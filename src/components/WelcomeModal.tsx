@@ -37,7 +37,7 @@ const WelcomeModal: React.FC<WelcomeModalProps> = (props) => {
           >
             <img
               className="absolute w-full h-full object-cover object-center"
-              src="https://images.unsplash.com/photo-1645389411992-e9ec49b158e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
+              src="fotomadacompress/fotoCoupleTerang.jpg"
               alt="couple"
             />
             <div className="absolute w-full h-full flex flex-col items-center justify-center bg-gradient-to-t from-primary">

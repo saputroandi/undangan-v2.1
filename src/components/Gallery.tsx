@@ -47,24 +47,24 @@ const Gallery: React.FC<GalleryProps> = (props) => {
   });
   const photos: Photo[] = [
     {
-      url: "https://images.unsplash.com/photo-1532383911524-17cd3daf08cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      alt: "gallery-photo.png",
+      url: "/fotomadacompress/fotoCoupleSilat.jpg",
+      alt: "fotoCoupleSilat.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1532383911524-17cd3daf08cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      alt: "gallery-photo.png",
+      url: "/fotomadacompress/fotoCoupleTerang.jpg",
+      alt: "fotoCoupleTerang.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1532383911524-17cd3daf08cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      alt: "gallery-photo.png",
+      url: "/fotomadacompress/fotoCoupleLandscape.jpg",
+      alt: "fotoCoupleLandscape.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1532383911524-17cd3daf08cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      alt: "gallery-photo.png",
+      url: "/fotomadacompress/fotoCouplegallery.jpg",
+      alt: "fotoCouplegallery.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1532383911524-17cd3daf08cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      alt: "gallery-photo.png",
+      url: "/fotomadacompress/fotoCoupleAdat.jpg",
+      alt: "fotoCoupleAdat.jpg",
     },
   ];
 
