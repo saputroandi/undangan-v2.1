@@ -17,7 +17,7 @@ const variants: Variants = {
     y: 0,
     opacity: 1,
     scale: 1,
-    transitionDuration: "200ms",
+    transitionDuration: "500ms",
   },
 };
 
@@ -40,12 +40,12 @@ const WelcomeModal: React.FC<WelcomeModalProps> = (props) => {
               src="fotomadacompress/fotoCoupleTerang.jpg"
               alt="couple"
             />
-            <div className="absolute w-full h-full flex flex-col items-center justify-center bg-gradient-to-t from-primary">
+            <div className="absolute w-full h-full flex flex-col items-center justify-center bg-gradient-to-t from-primary font-sans">
               <div className="w-10/12 flex flex-col justify-center items-center text-secondary">
-                <div className="">
-                  <p>The Wedding</p>
+                <div className="text-3xl">
+                  <h2>The Wedding Of</h2>
                 </div>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4 text-5xl">
                   <div className="">
                     <p>Nanda</p>
                   </div>
@@ -54,13 +54,22 @@ const WelcomeModal: React.FC<WelcomeModalProps> = (props) => {
                     <p>Enggar</p>
                   </div>
                 </div>
+                <div className="text-center text-sm font-serif">
+                  <p>Dear</p>
+                </div>
                 {params && (
-                  <div className="w-10/12 h-24 flex justify-center items-center mt-4 rounded-md bg-white opacity-60 text-primary">
+                  <div className="w-10/12 h-24 flex justify-center items-center mt-4 rounded-md bg-white opacity-60 text-primary font-serif">
                     <p>{params}</p>
                   </div>
                 )}
+                <div className="mt-4 text-center text-xs font-serif">
+                  <p>
+                    Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri
+                    Acara Pernikahan Kami.
+                  </p>
+                </div>
                 <div
-                  className="p-2 mt-4 rounded-md bg-secondary text-primary font-bold"
+                  className="p-2 mt-4 rounded-md bg-secondary text-sm text-primary font-bold font-serif"
                   onClick={() => props.setShowWelcomeModal(false)}
                 >
                   <p>Buka Undangan</p>

@@ -10,12 +10,12 @@ const Couple: React.FC<CoupleProps> = (props) => {
     <>
       <section
         id="couple"
-        className="w-full py-10 flex flex-col justify-between items-center bg-primary text-secondary"
+        className="w-full pt-10 flex flex-col justify-between items-center bg-primary"
       >
-        <div className="w-10/12 flex flex-col items-center gap-7">
+        <div className="w-full py-10 flex flex-col items-center gap-7 text-primary bg-secondary shadow-inner shadow-primary rounded-t-full">
           <div className="flex flex-col gap-4 items-center">
             <SlideComp direction={Direction.Left}>
-              <div className="relative w-48 overflow-hidden border-4 rounded-lg">
+              <div className="relative w-48 overflow-hidden border-4 rounded-lg rounded-t-full shadow-md">
                 <img
                   className="h-full w-full object-cover object-center"
                   src="fotomadacompress/fotoMempelaiWanita.jpg"
@@ -25,14 +25,14 @@ const Couple: React.FC<CoupleProps> = (props) => {
             </SlideComp>
 
             <SlideComp direction={Direction.Left}>
-              <div className="text-center">Rosnanda Kusumadawati, SKM</div>
+              <div className="mb-3 text-center text-xl">Rosnanda Kusumadawati</div>
               <div className="flex flex-col items-center gap-2">
-                <div>
+                <div className="text-sm">
                   <p>
                     <strong>Putri Kedua dari</strong>
                   </p>
                 </div>
-                <div className="text-center">
+                <div className="text-center text-sm">
                   <div>
                     <p>Bapak Sutaris Nandar</p>
                   </div>
@@ -53,7 +53,7 @@ const Couple: React.FC<CoupleProps> = (props) => {
 
           <div className="flex flex-col gap-4 items-center">
             <SlideComp direction={Direction.Right}>
-              <div className="relative w-48 overflow-hidden border-4 rounded-lg">
+              <div className="relative w-48 overflow-hidden border-4 rounded-lg rounded-t-full shadow-md">
                 <img
                   className="h-full w-full object-cover object-center"
                   src="fotomadacompress/fotoMempelaiPria.jpg"
@@ -63,14 +63,14 @@ const Couple: React.FC<CoupleProps> = (props) => {
             </SlideComp>
 
             <SlideComp direction={Direction.Right}>
-              <div className="text-center">Enggar Tri Sintara</div>
+              <div className="mb-3 text-center text-xl">Enggar Tri Sintara</div>
               <div className="flex flex-col items-center gap-2">
-                <div>
+                <div className="text-sm">
                   <p>
                     <strong>Putra Ketiga dari</strong>
                   </p>
                 </div>
-                <div className="text-center">
+                <div className="text-center text-sm">
                   <div>
                     <p>Bapak Mochammad Yasintara</p>
                   </div>

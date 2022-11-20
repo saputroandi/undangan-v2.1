@@ -9,12 +9,12 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
   const [play, setPlay] = useState(true);
   return (
     <>
-      <div className="fixed top-[67%] left-[85%] w-10 h-10 z-10">
+      <div className="fixed top-[67%] left-[85%] w-10 h-10 z-50">
         <SlideComp>
           <>
             {play && (
               <div
-                className="w-full h-full rounded-md bg-primary border-2 border-secondary shadow shadow-secondary"
+                className="w-full h-full rounded-md bg-primary border-2 border-secondary"
                 onClick={() => setPlay(false)}
               >
                 <svg
@@ -33,7 +33,7 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
 
             {!play && (
               <div
-                className="w-full h-full rounded-md bg-primary border-2 border-secondary shadow shadow-secondary"
+                className="w-full h-full rounded-md bg-primary border-2 border-secondary"
                 onClick={() => setPlay(true)}
               >
                 <svg

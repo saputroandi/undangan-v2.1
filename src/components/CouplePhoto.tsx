@@ -96,7 +96,7 @@ const CouplePhoto: React.FC<CouplePhotoProps> = (props) => {
           <svg
             id="visual"
             viewBox="0 0 900 600"
-            className="absolute bottom-0 left-0 right-0 w-[120%]"
+            className="absolute bottom-0 left-0 right-0 w-[110%]"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             version="1.1"

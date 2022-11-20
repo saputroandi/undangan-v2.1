@@ -52,10 +52,10 @@ const BankIcon: React.FC<BankIconProps> = (props) => {
   return (
     <>
       <AnimatePresence>
-        <div key={"bankIcon"} className="fixed top-[75%] left-[85%] w-10 h-10 z-10">
+        <div key={"bankIcon"} className="fixed top-[75%] left-[85%] w-10 h-10 z-50">
           <SlideComp>
             <div
-              className="w-full h-full rounded-md bg-primary border-2 border-secondary shadow shadow-secondary"
+              className="w-full h-full rounded-md bg-primary border-2 border-secondary"
               onClick={() => setShowModal(true)}
             >
               <svg
@@ -84,10 +84,10 @@ const BankIcon: React.FC<BankIconProps> = (props) => {
               ref={bankModal}
               className="w-[90%] flex flex-col justify-center items-center p-2 rounded-lg border bg-secondary border-white gap-2 text-center text-primary text-sm"
             >
-              <div className="">
+              <div className="text-4xl font-sans">
                 <p>Love Gift</p>
               </div>
-              <div className="text-sm">
+              <div className="text-xs">
                 <p>
                   Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda
                   kasih untuk kami, dapat melalui:

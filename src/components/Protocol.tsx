@@ -10,7 +10,7 @@ const Protocol: React.FC<ProtocolProps> = (props) => {
     <>
       <section className="w-full h-full bg-primary text-secondary">
         <SlideComp class="w-full py-10 flex flex-col justify-between items-center">
-          <div className="w-10/12 flex flex-col text-justify gap-7">
+          <div className="w-10/12 flex flex-col text-justify gap-7 text-sm">
             <div className="text-center">
               <p>Covid-19 Prevention</p>
             </div>

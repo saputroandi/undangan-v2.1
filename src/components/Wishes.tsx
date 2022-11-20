@@ -14,12 +14,12 @@ const Wishes: React.FC<WishesProps> = (props) => {
           direction={Direction.Up}
         >
           <div className="w-10/12 flex flex-col text-justify gap-4">
-            <div className="text-center">
+            <div className="text-center font-sans text-5xl">
               <p>Ucapan</p>
             </div>
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <label>
+                <label className="text-sm">
                   Pengirim:
                   <input
                     className="w-full p-2 rounded-lg focus:outline-none bg-secondary text-primary"
@@ -28,7 +28,7 @@ const Wishes: React.FC<WishesProps> = (props) => {
                     placeholder="Nama Anda"
                   />
                 </label>
-                <label>
+                <label className="text-sm">
                   Ucapan
                   <textarea
                     name="wishes"

@@ -40,25 +40,25 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     <>
       <section className="w-full flex flex-col justify-center bg-primary">
         <div className="h-96 flex flex-col justify-between items-center mb-20">
-          <div className="w-8/12 h-64 flex flex-col items-center justify-around text-secondary">
+          <div className="w-8/12 h-64 flex flex-col justify-around text-secondary">
             <SlideComp direction={Direction.Left}>
-              <div className="w-full text-3xl text-left">
+              <div className="self-start w-full font-sans text-7xl text-left">
                 <h2>Nanda</h2>
               </div>
             </SlideComp>
             <SlideComp>
-              <div className="text-xl">
+              <div className="text-center font-sans text-5xl">
                 <h2>&</h2>
               </div>
             </SlideComp>
             <SlideComp direction={Direction.Right}>
-              <div className="w-full text-3xl text-right">
+              <div className="self-end w-full font-sans text-7xl text-right">
                 <h2>Enggar</h2>
               </div>
             </SlideComp>
           </div>
           <SlideComp direction={Direction.Up}>
-            <div className="w-[85vw] md:w-[20rem] h-20 flex justify-around items-center rounded-md text-primary bg-secondary">
+            <div className="w-[85vw] md:w-[20rem] h-20 flex justify-around items-center rounded-md text-primary bg-secondary font-serif">
               <div className="flex flex-col justify-center items-center">
                 <div>
                   <p>{hari}</p>
