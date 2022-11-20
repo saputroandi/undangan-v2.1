@@ -2,21 +2,37 @@ import React, { useState } from "react";
 import SlideComp, { Direction } from "./animate/SlideComp";
 
 type MusicIconProps = {
-  playingState: boolean;
-  setPlayingState: (state: boolean) => void;
   children?: React.ReactElement;
 };
 
 const MusicIcon: React.FC<MusicIconProps> = (props) => {
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(true);
+  const toggleMusic = (state: boolean) => {
+    setPlaying(state);
+    if (audioRef.current) {
+      if (playing) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+    }
+  };
   return (
     <>
       <div className="fixed top-[67%] left-[85%] w-10 h-10 z-30">
+        <audio
+          src="/sound/beautiful_in_white.mp3"
+          autoPlay={true}
+          ref={audioRef}
+          loop={true}
+        />
         <SlideComp>
           <>
-            {props.playingState && (
+            {playing && (
               <div
                 className="w-full h-full rounded-md bg-primary border-2 border-secondary"
-                onClick={() => props.setPlayingState(false)}
+                onClick={() => toggleMusic(false)}
               >
                 <svg
                   className="w-full h-full p-2 fill-transparent stroke-secondary animate-rotate"
@@ -32,10 +48,10 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
               </div>
             )}
 
-            {!props.playingState && (
+            {!playing && (
               <div
                 className="w-full h-full rounded-md bg-primary border-2 border-secondary"
-                onClick={() => props.setPlayingState(true)}
+                onClick={() => toggleMusic(true)}
               >
                 <svg
                   className="w-full h-full p-2 fill-transparent stroke-secondary animate-rotate"

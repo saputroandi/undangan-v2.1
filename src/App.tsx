@@ -14,6 +14,7 @@ import Protocol from "./components/Protocol";
 import Wishes from "./components/Wishes";
 import BankIcon from "./components/BankIcon";
 import MusicIcon from "./components/MusicIcon";
+import { useScroll } from "framer-motion";
 
 type AppProps = {
   children?: React.ReactNode;
@@ -21,23 +22,22 @@ type AppProps = {
 
 const App: React.FC = (props: AppProps): React.ReactElement => {
   const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(true);
-  const audioRef = React.useRef<HTMLAudioElement>(null);
-  const [playing, setPlaying] = useState(true);
+  const [showNavigation, setShowNavigation] = useState<boolean>(false);
+  const { scrollY } = useScroll();
 
-  const toggleMusic = (state: boolean) => {
-    setPlaying(state);
-    if (audioRef.current) {
-      if (!playing) {
-        audioRef.current.pause();
+  React.useEffect(() => {
+    return scrollY.onChange((latest) => {
+      if (latest >= 390) {
+        setShowNavigation(true);
       } else {
-        audioRef.current.play();
+        setShowNavigation(false);
       }
-    }
-  };
+    });
+  }, []);
 
   const components: React.ReactElement[] = [
     <BankIcon />,
-    <MusicIcon playingState={playing} setPlayingState={toggleMusic} />,
+    <MusicIcon />,
     <CouplePhoto />,
     <Countdown />,
     <Opening />,
@@ -63,18 +63,12 @@ const App: React.FC = (props: AppProps): React.ReactElement => {
           return (
             <main>
               <>
-                <audio
-                  src="/sound/beautiful_in_white.mp3"
-                  autoPlay={true}
-                  ref={audioRef}
-                  loop={true}
-                />
                 <BaseComponent key={idx}>{component}</BaseComponent>
-                <Navigation key={"navigationKey"} />
               </>
             </main>
           );
         })}
+      {showNavigation && <Navigation key={"navigationKey"} />}
     </>
   );
 };
