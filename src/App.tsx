@@ -21,9 +21,23 @@ type AppProps = {
 
 const App: React.FC = (props: AppProps): React.ReactElement => {
   const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(true);
+  const audioRef = React.useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(true);
+
+  const toggleMusic = (state: boolean) => {
+    setPlaying(state);
+    if (audioRef.current) {
+      if (!playing) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+    }
+  };
+
   const components: React.ReactElement[] = [
     <BankIcon />,
-    <MusicIcon />,
+    <MusicIcon playingState={playing} setPlayingState={toggleMusic} />,
     <CouplePhoto />,
     <Countdown />,
     <Opening />,
@@ -49,6 +63,12 @@ const App: React.FC = (props: AppProps): React.ReactElement => {
           return (
             <main>
               <>
+                <audio
+                  src="/sound/beautiful_in_white.mp3"
+                  autoPlay={true}
+                  ref={audioRef}
+                  loop={true}
+                />
                 <BaseComponent key={idx}>{component}</BaseComponent>
                 <Navigation key={"navigationKey"} />
               </>

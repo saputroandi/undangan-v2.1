@@ -2,23 +2,24 @@ import React, { useState } from "react";
 import SlideComp, { Direction } from "./animate/SlideComp";
 
 type MusicIconProps = {
+  playingState: boolean;
+  setPlayingState: (state: boolean) => void;
   children?: React.ReactElement;
 };
 
 const MusicIcon: React.FC<MusicIconProps> = (props) => {
-  const [play, setPlay] = useState(true);
   return (
     <>
-      <div className="fixed top-[67%] left-[85%] w-10 h-10 z-50">
+      <div className="fixed top-[67%] left-[85%] w-10 h-10 z-30">
         <SlideComp>
           <>
-            {play && (
+            {props.playingState && (
               <div
                 className="w-full h-full rounded-md bg-primary border-2 border-secondary"
-                onClick={() => setPlay(false)}
+                onClick={() => props.setPlayingState(false)}
               >
                 <svg
-                  className="w-full h-full p-2 fill-transparent stroke-secondary"
+                  className="w-full h-full p-2 fill-transparent stroke-secondary animate-rotate"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -31,13 +32,13 @@ const MusicIcon: React.FC<MusicIconProps> = (props) => {
               </div>
             )}
 
-            {!play && (
+            {!props.playingState && (
               <div
                 className="w-full h-full rounded-md bg-primary border-2 border-secondary"
-                onClick={() => setPlay(true)}
+                onClick={() => props.setPlayingState(true)}
               >
                 <svg
-                  className="w-full h-full p-2 fill-transparent stroke-secondary"
+                  className="w-full h-full p-2 fill-transparent stroke-secondary animate-rotate"
                   viewBox="0 0 16 16"
                 >
                   <path

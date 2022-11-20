@@ -11,10 +11,10 @@ const Opening: React.FC<OpeningProps> = (props) => {
       <section className="w-full py-10 flex flex-col justify-between items-center bg-primary text-secondary">
         <div className="w-10/12 flex flex-col text-justify gap-7">
           <SlideComp direction={Direction.Up}>
-            <div className="text-center mb-6">
-              <img src="/png/basmallah.png" alt="basmallah" />
+            <div className="w-64 mx-auto mb-3">
+              <img className="w-full h-full" src="/png/basmallah.png" alt="basmallah" />
             </div>
-            <div>
+            <div className="text-sm">
               <p>
                 “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
                 pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan

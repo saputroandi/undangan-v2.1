@@ -55,7 +55,7 @@ const BankIcon: React.FC<BankIconProps> = (props) => {
         <div key={"bankIcon"} className="fixed top-[75%] left-[85%] w-10 h-10 z-50">
           <SlideComp>
             <div
-              className="w-full h-full rounded-md bg-primary border-2 border-secondary"
+              className="w-full h-full rounded-md bg-primary border-2 border-secondary animate-wiggle"
               onClick={() => setShowModal(true)}
             >
               <svg
