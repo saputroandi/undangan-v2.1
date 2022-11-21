@@ -13,7 +13,7 @@ const Couple: React.FC<CoupleProps> = (props) => {
         className="w-full pt-10 flex flex-col justify-between items-center bg-primary"
       >
         <SlideComp class="w-full">
-          <div className="w-full py-10 flex flex-col items-center gap-7 text-primary bg-secondary shadow-inner shadow-primary rounded-t-full">
+          <div className="w-full py-10 flex flex-col items-center gap-7 text-primary bg-secondary rounded-t-full">
             <div className="flex flex-col gap-4 items-center">
               <SlideComp direction={Direction.Left}>
                 <div className="relative w-48 overflow-hidden border-4 rounded-lg rounded-t-full shadow-md">
