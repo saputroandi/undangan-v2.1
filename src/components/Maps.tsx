@@ -18,7 +18,7 @@ const Maps: React.FC<MapsProps> = (props) => {
     <>
       <section
         id="maps"
-        className="w-full py-10 flex flex-col justify-between items-center bg-primary -z-10"
+        className="w-full py-10 flex flex-col justify-between items-center bg-primary"
       >
         <div className="w-10/12 flex flex-col text-center text-secondary">
           <SlideComp direction={Direction.Up}>
